@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Détails Produit</title>
+</head>
+
+<body>
+
+<h1>Liste des détails des produits</h1>
+
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Fabricant</th>
+    <th>Pays d'origine</th>
+    <th>Composition</th>
+    <th>Dosage</th>
+    <th>Indications</th>
+</tr>
+
+<tr th:each="d : ${details}">
+    <td th:text="${d.id}"></td>
+    <td th:text="${d.fabricant}"></td>
+    <td th:text="${d.paysOrigine}"></td>
+    <td th:text="${d.composition}"></td>
+    <td th:text="${d.dosage}"></td>
+    <td th:text="${d.indications}"></td>
+</tr>
+</table>
+
+</body>
+</html>
